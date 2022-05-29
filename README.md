@@ -31,3 +31,6 @@ At this point, you can choose from the following automations:
 
 These automations are easily run using the following syntax within the internet-identity-automation-python repo:
 "python script_you_want_to_call.py 1068431" where 1068431 is changed to the internet identity anchor you would like to automate.
+
+# Contribute!
+If you find bugs or would like to add automations to this repo, please submit a PR! I'll be adding more automations to the library over the next few months and would love to have contributions from others doing the same.
