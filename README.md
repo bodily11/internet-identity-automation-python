@@ -11,7 +11,8 @@ Potential use cases include:
 # Setup your environment
 1. You need an installation of Python 3
 2. You need to git clone the ic-py repo and run "pip install ./" within the ic-py directory
-3. You need to pip install the ed25519 Python package via "pip install ed25519"
+3. You need to git clone the internet-identity-automation-python repo on your local machine (you don't need to pip install this one)
+4. You need to pip install the ed25519 Python package via "pip install ed25519"
 
 # Usage is as follows:
 ## First, add a locally generated private key 'python_scripts' device to Internet Identity
