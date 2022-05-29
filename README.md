@@ -7,3 +7,6 @@ Potential use cases include:
 3. Automatically reject NNS proposals from known spammers
 4. Post to a social media site
 5. Batch transfer NFTs (if using II to login to Stoic)
+
+# Usage is as follows:
+## 1. Add a locally generated private key 'python_scripts' device to Internet Identity
