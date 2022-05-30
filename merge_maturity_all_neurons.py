@@ -19,7 +19,7 @@ with open('./identity.did','r') as f:
 with open('./governance.did','r') as f:
     governance_did = f.read()
 
-with open('./internet_identity_private_key.txt','r') as f:
+with open(f'./{internet_identity_anchor}_internet_identity_private_key.txt','r') as f:
     private_key = f.read()
 
 device_identity = Identity(private_key)

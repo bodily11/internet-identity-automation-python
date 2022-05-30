@@ -18,7 +18,7 @@ with open('./identity.did','r') as f:
 with open('./governance.did','r') as f:
     governance_did = f.read()
 
-with open('./internet_identity_private_key.txt','r') as f:
+with open(f'./{internet_identity_anchor}_internet_identity_private_key.txt','r') as f:
     private_key = f.read()
 
 device_identity = Identity(private_key)
@@ -66,7 +66,7 @@ governanceCanister = Canister(agent=delegated_agent, canister_id=governance_cani
 result = governanceCanister.get_pending_proposals()
 active_governance_proposals = [x for x in result[0] if x['topic'] == 4]
 
-known_list_of_spammers = [16392997059792243989] #ysyms
+known_list_of_spammers = [16392997059792243989, 13897053307110729737]
 
 for active_proposal in active_governance_proposals:
     if active_proposal['proposer'][0]['id'] in known_list_of_spammers: # check if neuron submitter in list of spammers

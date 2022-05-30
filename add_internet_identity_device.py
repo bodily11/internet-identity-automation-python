@@ -14,7 +14,7 @@ private_key = signing_key.to_ascii(encoding="hex").decode('utf-8')
 # WARNING: this saves your private key to the local repo
 # PLEASE, do not commit this to Github
 # If you commit this to a public repo, someone could easily steal your entire II
-with open(f'internet_identity_private_key.txt','w') as f:
+with open(f'{internet_identity_anchor}_internet_identity_private_key.txt','w') as f:
     f.write(private_key)
 
 # candid included here as ic-py doesn't support inline Type definitions yet
