@@ -1,9 +1,14 @@
 import argparse
 parser = argparse.ArgumentParser("reject_proposals")
-parser.add_argument("internet_identity_anchor", help="All neurons for this Internet Identity anchor will vote against spam proposals", type=int)
+parser.add_argument("internet_identity_anchor", help="All neurons for this Internet Identity anchor will vote against spam proposals", type=str)
 args = parser.parse_args()
 
-internet_identity_anchor = int(args.internet_identity_anchor)
+
+try:
+  internet_identity_anchor = int(args.internet_identity_anchor)
+except:
+  import internet_identity_names
+  internet_identity_anchor = internet_identity_names.names[args.internet_identity_anchor]
 
 import json
 from ic.canister import Canister

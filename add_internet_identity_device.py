@@ -1,9 +1,13 @@
 import argparse
 parser = argparse.ArgumentParser("new_device_registration")
-parser.add_argument("internet_identity_anchor", help="A new device 'python_scripts' will be added to the Internet Identity anchor provided", type=int)
+parser.add_argument("internet_identity_anchor", help="A new device 'python_scripts' will be added to the Internet Identity anchor provided", type=str)
 args = parser.parse_args()
 
-internet_identity_anchor = int(args.internet_identity_anchor)
+try:
+  internet_identity_anchor = int(args.internet_identity_anchor)
+except:
+  import internet_identity_names
+  internet_identity_anchor = internet_identity_names.names[args.internet_identity_anchor]
 
 # you will need the ed25519 Python package
 import ed25519

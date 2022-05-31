@@ -130,3 +130,4 @@ dmypy.json
 
 # private key information
 *private_key.txt
+internet_identity_names.py
