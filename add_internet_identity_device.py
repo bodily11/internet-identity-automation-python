@@ -47,7 +47,8 @@ response = identityCanister.add_tentative_device(internet_identity_anchor,
       'alias':'python_scripts',
       'credential_id':[[]],
       'purpose':{'authentication':None},
-      'key_type':{'unknown':None}
+      'key_type':{'unknown':None},
+      'protection':{'unprotected':None},
   }
 )
 print(response)
